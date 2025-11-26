@@ -1,0 +1,32 @@
+<%-include('../cabecalho.ejs')%>
+ <header>
+        <h3>Editar Obra</h3>
+      </header>
+      <div class="content">
+        <form id="form-Obra" method="post" autocomplete="off" >
+          <div class="grid">
+            <div>
+              <label for="nome">Nome da Obra</label>
+              <input id="nome" value="<%=obra.nome%>" name="nome" type="text"  required>
+            </div>
+            <div>
+              <label for="nomeartista">Nome do Artista da obra</label>
+              <input id="nomeartista" value="<%=obra.nomeartista%>" name="nomeartista" type="text" required>
+            </div>
+             <div>
+              <label for="materiais">Materias utilizados</label>
+              <input id="materiais" value="<%=obra.materiais%>" name="materiais" type="text" required>
+            </div>
+            <div>
+              <label for="dataobra">Data da Obra</label>
+              <input id="dataobra" value="<%=obra.dataobra%>" name="dataobra" type="date" required>
+            </div>
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/Obra/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Editar Obras</button>
+          </footer>
+        </form>
+      </div>
+
+  <%-include('../rodape.ejs')%>

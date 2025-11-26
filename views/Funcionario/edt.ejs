@@ -1,0 +1,32 @@
+<%-include('../cabecalho.ejs')%>
+ <header>
+        <h3>Editar Funcionario</h3>
+      </header>
+      <div class="content">
+        <form id="form-Funcionario" method="post" autocomplete="off" >
+          <div class="grid">
+            <div>
+              <label for="nome">Nome do funcionario</label>
+              <input id="nome" value="<%=funcionario.nome%>" name="nome" type="text"  required>
+            </div>
+            <div>
+              <label for="salario">Salário do funcionario</label>
+              <input id="salario" value="<%=funcionario.salario%>" name="salario" type="text" required>
+            </div>
+             <div>
+              <label for="cargo">Cargo do funcionario</label>
+              <input id="cargo" value="<%=funcionario.cargo%>" name="cargo" type="text" required>
+            </div>
+            <div>
+              <label for="telefone">Telefone do funcionario</label>
+              <input id="telefone" value="<%=funcionario.telefone%>" name="telefone" type="text" required>
+            </div>
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/Funcionario/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Editar Cliente</button>
+          </footer>
+        </form>
+      </div>
+
+  <%-include('../rodape.ejs')%>

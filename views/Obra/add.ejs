@@ -1,0 +1,37 @@
+     <%-include('../cabecalho.ejs')%>
+     <header>
+        <h3>Adicionar Nova Obra</h3>
+      </header>
+      <div class="content">
+        <form id="form-Obra" autocomplete="off" action="/Obra/add/ok" method="post"
+        enctype="multipart/form-data">
+          <div class="grid">
+            <div>
+              <label for="nome">Nome da Obra</label>
+              <input id="nome" name="nome" type="text" required>
+            </div>
+            <div>
+              <label for="foto">Foto das Obra</label>
+              <input id="foto" name="foto" type="file">
+            </div>
+            <div>
+              <label for="nomeartista">Nome do artista da Obra</label>
+              <input id="nomeartista" name="nomeartista" type="text" required >
+            </div>
+            <div>
+              <label for="materias">Materiais Utilizados na Obras</label>
+              <input id="materiais" name="materiais" type="text" required>
+            </div>
+            <div>
+              <label for="dataobra">Data da Obra</label>
+              <input id="dataobra" name="dataobra" type="date" class="data" required>
+            </div>
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/Obra/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Adicionar Obra</button>
+          </footer>
+        </form>
+      </div>
+
+      <%-include('../rodape.ejs')%>

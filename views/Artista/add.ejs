@@ -1,0 +1,48 @@
+     <%-include('../cabecalho.ejs')%>
+     <header>
+        <h3>Novo Artista</h3>
+      </header>
+      <div class="content">
+        <form id="form-Artista" autocomplete="off" action="/Artista/add/ok" method="post"
+        enctype="multipart/form-data">
+          <div class="grid">
+            <div>
+            <label for="nome">Nome do Artista</label>
+              <input id="nome" name="nome" type="text" placeholder="Digite o nome do artista" required>
+            </div>
+            <div>
+              <label for="foto">Foto dos Artistas</label>
+              <input id="foto" name="foto" type="file">
+            </div>
+            <div>
+              <label for="salario">Salário do Artista</label>
+              <input id="salario" name="salario" type="number" placeholder="Digite o salario" required>
+
+              </select>
+            </div>
+            <div>
+              <label for="areaexercida">Àrea exercida</label>
+              <input id="areaexercida" name="areaexercida" type="text" placeholder="Ex: Esculor,pintor..." required>
+                
+              </select>
+            </div>
+            <div>
+              <label for="iniciocontrato">Inicio do contrato</label>
+              <input id="iniciocontrato" name="iniciocontrato" type="date" class="data"  required>
+              </select>
+            </div>
+            <div>
+              <label for="fimcontrato">fim do contrato</label>
+              <input id="fimcontrato" name="fimcontrato" type="date" class="data"  required>
+              </select>
+            </div>
+           
+          
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/Artista/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Adicionar Artista</button>
+          </footer>
+        </form>
+      </div>
+
+      <%-include('../rodape.ejs')%>

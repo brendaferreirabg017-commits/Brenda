@@ -80,6 +80,7 @@ res.redirect("/Artista/lst")
 })
 
 
+
 ///////////////////////////////////////////////////////////////////
 
 
@@ -218,8 +219,13 @@ res.redirect("/Obra/lst")
 
 
 app.get('/site', async (req, res) => {
+    
     const Obras= await Obra.find()
-    res.render("site/index",{Obras})
+    const Artistas=await Artista.find()
+    const Clientes=await Cliente.find()
+    const Funcionarios=await Funcionario.find()
+   
+    res.render("site/index",{Obras,Artistas,Clientes,Funcionarios})
 })
 
 app.listen(3001)
